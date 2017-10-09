@@ -1,0 +1,7 @@
+task default: %w[run]
+CONFIG = ENV['CONFIG'] || '../config/secrets.json'
+
+desc "Runs the example application"
+task :run do
+    ruby 'main.rb', CONFIG
+end
